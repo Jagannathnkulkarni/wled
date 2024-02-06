@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:nodemcuv2' >>platformio.ini
-        echo 'build_flags = ${env:nodemcuv2.build_flags} -D DEFAULT_LED_COUNT=86 -D CLIENT_SSID='\''"FsCy-amFnYW5uYXRobmt1Gthcm5p"'\'' -D CLIENT_PASS='\''"11122111"'\'' -D WLED_AP_SSID='\''"WLED_CLOCK"'\'' -D USERMOD_PIRSWITCH -D USERMOD_RTC' >>platformio.ini
+        echo 'build_flags = ${env:nodemcuv2.build_flags} -D DEFAULT_LED_COUNT=86 -D CLIENT_SSID='\''"FsCy-amFnYW5uYXRobmt1Gthcm5p"'\'' -D CLIENT_PASS='\''"11122111"'\'' -D WLED_AP_SSID='\''"WLED_CLOCK"'\'' -D USERMOD_RTC' >>platformio.ini
         
         pio run -e custom_build || pio run -e custom_build
     - name: Copy Files
